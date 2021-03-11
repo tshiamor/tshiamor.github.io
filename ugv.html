@@ -33,32 +33,20 @@
 						<div class="inner">
 							<h1 class="major">A modified RC car UGV</h1>
 							<span class="image fit"><img src="images/ugv1.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<p>This ugv runs on top of a 35km/h RC Car.The drive system is an Ackerman type of drive, whereby the front two wheels are used to steer ( control turning angles) whilst the back wheels provide for throttle. It uses a raspberry pi for computing and runs ROS Melodic and OpenCV libraries. It is equiped with camera for vision and 2D lidar for obscatacle detection and to aid navigtion. Two modes are supported, that is a manually controlled navigation mode and an autonomous mode.</p>
+							<p>To support autonomous mode the robot uses slam. This is a simultaneous navigation localization and mapping technique. It is used to build a map of an area, by manually driving in an unknown area, whilst taking sensor readings required for map building. Aftewards the robot is localized in previously built map, and uses sensor fusion to obtain its most probable orientation and position within the map as it moves. With this approach the robot can autonomously drive to any location within the map.It is also able to avoid obstacles and travels to its global goal by calculating the shortest distance to the goal. To implament above features hector slam package is used and tuned for this robot model.</p>
 
 						</div>
 
 					</section>
-
-                    <!-- Main-2 -->
-					<section id="main2" class="wrapper">
-						<div class="inner">
-							<h2 class="major">A modified RC car UGV</h2>
-							<span class="image fit"><img src="images/ugv5.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-
-						</div>
-					</section>
-
 
                     	<!-- Main-2 -->
 					<section id="main3" class="wrapper">
 						<div class="inner">
 							<h2 class="major">A modified RC car UGV</h2>
 							<span class="image fit"><img src="images/ugv6.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<p>The Control inputs are Speed and direction. These velocities vectors commands can be relayed via a wireless joypad by using the teleoperation package. They are then translated to suite the implemented drive system, then sent to the Ros serial package, which is the interface to the rc receiver(speed controller in the original rc car).</p>
+							<p>Ros nodes interchangeable publish to the motion topic depending on the selected mode i.e manual drive or autonomous.</p>
 
                         </div>
 					</section>
@@ -72,20 +60,19 @@
 
 								<iframe width="420" height="315"
 								src="https://www.youtube.com/embed/_nLge0mFtlM">
-								</iframe> 
+								</iframe>
 
 
 								<iframe width="420" height="315"
 								src="https://www.youtube.com/embed/wReshqsDrts">
-								</iframe> 
+								</iframe>
 
 
-							
-							
+
+
 							</span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-
+							<p>Above videos display the map building stage using hector slam.</p>
+							<p>The map server runs on the actual robot, whilst a different computer in the network is used to view the live map and location of the robot during the live map build.</p>
 						</div>
 					</section>
 
@@ -96,13 +83,13 @@
 
 
                     <section id="two" class="wrapper">
-						
-							
-							
-                                
+
+
+
+
                      <a href="#" class="image"><img src="images/ugv4.jpg" alt="" /></a>
 
-                    </section>     
+                    </section>
 
 			</div>
 
