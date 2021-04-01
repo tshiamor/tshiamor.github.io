@@ -11,21 +11,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-		.column {
-			float: left;
-			width: 50.0%;
-			padding: 5px;
-		  }
-		  
-		  
-		  .row::after {
-			content: "";
-			clear: both;
-			display: table;
-		  }
-		</style>
-
 	</head>
 	<body class="is-preload">
 
@@ -35,7 +20,7 @@
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="4wheeldrive.html" class="active">Generic</a></li>
+						<li><a href="generic.html" class="active">Generic</a></li>
 						<li><a href="elements.html">Elements</a></li>
 					</ul>
 				</nav>
@@ -47,53 +32,12 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Autonomous Differential Drive Robot</h1>
-							<span class="image fit"><img  src="images/rear2.jpg" alt="" /></span>
-							<p>This mobile platform is used for mapping and testing different slam approaches.</p>
-							<p>The platform is configured to dead reckoning with use of its encoders, set up for gmapping slam with lidar and odometry or rtabmap with the use of the calibrated camera.</p>
+							<h1 class="major">A Generic Page</h1>
+							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
+							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
+							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
 						</div>
 					</section>
-
-
-			<!-- Main-2 -->
-			<section id="main3" class="wrapper">
-				<div class="inner">
-					<h2 class="major">Mapping stage</h2>
-					<span class="image fit">
-						<!--
-						<div style="float:left;margin-right:5px;">
-						<img width="30%"  src="images/side1.jpg" alt="" />
-						<p style="text-align:center;">This is image 1</p>
-						</div>
-
-						<div style="float:left;margin-right:5px;">
-						<img width="30%" src="images/rear1.jpg" alt="" />
-						<p style="text-align:center;">This is image 2</p>
-						</div>
-					-->
-
-
-
-						<div class="row">
-							<div class="column">
-							  <img src="images/side1.jpg" alt="Snow" style="width:100%">
-							</div>
-							<div class="column">
-							  <img src="images/diff_cover2.jpg"  alt="Forest" style="width:100%">
-							</div>
-						  </div> 
-
-
-
-
-
-					</span>
-					<p>Gmapping nodes run on the robot and use a 2d lidar to build a map, whilst publishing odometry of the robot and its imu data(orientation), respsectively to the odometry and transforms topics.</p>
-					<p>The map server runs on the actual robot, whilst a different computer in the network is used to view the live map and location of the robot during the live map on rviz.
-						At localisation stage the robot can be assigned a global goal to reach, whereby it will iteratively work out both local and global cost maps to reach the destination.
-					</p>
-				</div>
-			</section>
 
 			</div>
 
