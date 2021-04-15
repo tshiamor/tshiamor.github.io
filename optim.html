@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.column {
+				float: left;
+				width: 50.0%;
+				padding: 5px;
+			  }
+			  
+			  
+			  .row::after {
+				content: "";
+				clear: both;
+				display: table;
+			  }
+			</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Hyperspace</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Optimal travel path to multiple destinations</h1>
+							<span class="image fit"><img src="images/simulation_graphs.png" alt="" /></span>
+							<p> This simulation is akin to the classical travelling salesman problem. The task is to visit each node, while minimizing total travel distance. The simulation is inspired by [1] whereby dynamic programming is used to solve, and [2] where reinforcement learning is used to solve a tsp problem.</p>
+							<p> In this task Q-learning is used to solve an N-node(number of destinations) with graph embedding to represent the graph structure of visited nodes and paths. The system has no knowledge of the mathematics used in travelling salesman problems,
+								 or heuristics such as [3] where Concorde is used.
+								  It is solely dependent on training knowledge from sequences of multiple traversal of the paths.
+								 Rewards are given cumulated sequences, as the agent tries to minimize the total accumulated distance. </p>
+						</div>
+					</section>
+
+
+					
+				<!-- Main -->
+				<section id="main" class="wrapper">
+					<div class="inner">
+						<h1 class="major">Task</h1>
+						<span class="image fit">
+							
+							
+							<div class="row">
+								<div class="column">
+								  <img src="images/distance_matrix.png" alt="Snow" style="width:100%">
+								</div>
+								<div class="column">
+								  <img src="images/paths.png"  alt="Forest" style="width:100%">
+								</div>
+							  </div> 
+						
+						
+						</span>
+						<p> There are 10 nodes in total with indices [ 0 - 9] </p>
+						<p> Above shows the distance matrix and internode connections.
+							 The nodes are also color coded 0:green 1:black, 2:orange, 3:white, 4:yellow, 5:purple, 6:blue, 7:green, 8:green, 9:red </p>
+					</div>
+				</section>
+
+
+		<!-- Main-2 -->
+		<section id="main3" class="wrapper">
+			<div class="inner">
+				<h2 class="major">Training result</h2>
+				<span class="image fit">
+	
+
+
+
+					<div class="row">
+						<div class="column">
+						  <img src="images/average_length.png" alt="Snow" style="width:100%">
+						</div>
+						<div class="column">
+						  <img src="images/loss.png"  alt="Forest" style="width:100%">
+						</div>
+					  </div> 
+
+				</span>
+				<p> The system is trained using pytorch framework. Once training ceases, the turtlebot is given actions to move to the desired nodes by the action server.</p>
+				<p> After 4000 iterations a minimal distance of  4.344m is obtained. The optimal path is [8, 2, 0, 7, 4, 5, 6, 3, 9] which covers each node, i.e each node is visited only once.
+				</p>
+			</div>
+		</section>
+
+		
+
+		<!-- Main-3
+		<section id="main3" class="wrapper">
+			<div class="inner">
+				<h2 class="major">Platform</h2>
+				<span class="image fit">
+	
+
+
+
+					<div class="row">
+						<div class="column">
+							<img src="images/side1.jpg" alt="Snow" style="width:100%">
+						</div>
+						<div class="column">
+							<img src="images/diff_cover2.jpg"  alt="Forest" style="width:100%">
+						</div>
+						</div> 
+
+				</span>
+				<p>Gmapping nodes run on the robot(nvidia jetson ) and use a 2d lidar to build a map, whilst publishing odometry of the robot and its imu data(orientation), respectively to the odometry and transforms topics.</p>
+				<p>The map server runs on the actual robot, whilst a different computer in the network is used to view the live map and location of the robot during the live map on rviz.
+					At localisation stage, using AMCL (Adaptive Monte Carlo Localization) packages, the robot can be assigned a global goal to reach, whereby it will iteratively work out both local and global cost maps to reach the destination.
+				</p>
+			</div>
+		</section>
+
+		 -->
+
+		 <section id="main4" class="wrapper"></section>
+		 <div class="inner">
+		 <span class="image fit">
+		</span>
+		<div class="row">
+		<p>
+			References <br>
+
+			[1]: https://www.youtube.com/watch?v=XDw03aM6FeQ&t=2985s <br>
+
+			[2]: https://medium.com/unit8-machine-learning-publication/routing-traveling-salesmen-on-random-graphs-using-reinforcement-learning-in-pytorch-7378e4814980 <br>
+
+			[3]: http://www.math.uwaterloo.ca/tsp/concorde/index.html
+		
+		</p>
+	</div>
+	
+	</div>
+	</section>
+
+
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
