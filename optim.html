@@ -50,7 +50,7 @@
 							<p> In this task Q-learning is used to solve an N-node(number of destinations) with graph embedding to represent the graph structure of visited nodes and paths. The system has no knowledge of the mathematics used in travelling salesman problems,
 								 or heuristics such as [3] where Concorde is used.
 								  It is solely dependent on training knowledge from sequences of multiple traversal of the paths.
-								 Rewards are given cumulated sequences, as the agent tries to minimize the total accumulated distance. </p>
+								 Rewards are given for cumulated sequences, as the agent tries to minimize the total travel distance. </p>
 						</div>
 					</section>
 
@@ -101,7 +101,7 @@
 
 				</span>
 				<p> The system is trained using pytorch framework. Once training ceases, the turtlebot is given actions to move to the desired nodes by the action server.</p>
-				<p> After 4000 iterations a minimal distance of  4.344m is obtained. The optimal path is [8, 2, 0, 7, 4, 5, 6, 3, 9] which covers each node, i.e each node is visited only once.
+				<p> After 4000 episodes a minimal distance of  4.344m is obtained. The optimal path is [8, 2, 0, 7, 4, 5, 6, 3, 9] which covers each node, i.e each node is visited only once.
 
 					<br>
 					<br>
