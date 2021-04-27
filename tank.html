@@ -14,6 +14,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.column {
+				float: left;
+				width: 50.0%;
+				padding: 5px;
+			  }
+			  
+			  
+			  .row::after {
+				content: "";
+				clear: both;
+				display: table;
+			  }
+			</style>
 	</head>
 	<body class="is-preload">
 
@@ -34,13 +48,41 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Tank Drive Robot</h1>
-							<span class="image fit"><img src="images/tank2.jpg" alt="" /></span>
+							<span class="image fit"><img src="images/tank2.jpg" alt=""  style="height:50%" /></span>
 							<p> This is a tank drive system robot. It runs on a single board computer(Nvidia jetson nano interchangeably raspberry pi as well), and has various sensors to aid its naviagtion. It can also be driven remotley using a wireless joystick on the client nodes.</p>
 							<p>It runs RTABmap Slam (Vision based slam) for mapping navigtion within environments. Sensors such as the kinect camera, imu sensors aid in locatization whithin the map.</p>
 						</div>
 					</section>
 
 			</div>
+
+
+		<!-- Main-2 -->
+		<section id="main3" class="wrapper">
+			<div class="inner">
+				<h2 class="major">Robot components</h2>
+				<span class="image fit">
+	
+
+
+
+					<div class="row">
+						<div class="column">
+						  <img src="images/circuits_tank1.jpg" alt="Snow" style="width:100%">
+						</div>
+						<div class="column">
+						  <img src="images/tank_no_cover.jpg"  alt="Forest" style="width:100%">
+						</div>
+					  </div> 
+
+				</span> 
+				<p> The main board interfaces the 3d sensor(kinect 360) via usb with a modified power bridge(switching regulator to power kinect).</p>
+				<p>The mcu board however interfaces more sensors, a 9dof imu via i2c, 2 pwm motor drives and communicates with the main board using ros serial .</p>
+
+
+			</div>
+		</section>
+
 
 
 
@@ -56,7 +98,7 @@
 
 
 					</span>
-					<p>Above show teleoperation of the robot</p>
+					<p>Above shows teleoperation of the robot</p>
 					<p>Although the drive system is tank(chain),  it can be controlled like a regular differential drive system, as shown above</p>
 
 				</div>
