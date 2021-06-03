@@ -46,10 +46,10 @@
 						<div class="inner">
 							<h1 class="major">Optimal travel path to multiple destinations</h1>
 							<span class="image fit"><img src="images/simulation_graphs.png" alt="" /></span>
-							<p> This simulation is akin to the classical travelling salesman problem. The task is to visit each node, while minimizing total travel distance. The simulation is inspired by [1] whereby dynamic programming is used to solve, and [2] where reinforcement learning is used to solve a tsp problem.</p>
-							<p> In this task Q-learning is used to solve an N-node(number of destinations) with graph embedding to represent the graph structure of visited nodes and paths. The system has no knowledge of the mathematics used in travelling salesman problems,
-								 or heuristics such as [3] where Concorde is used.
-								  It is solely dependent on training knowledge from sequences of multiple traversal of the paths.
+							<p> This simulation is akin to the classical travelling salesman problem, otherwise known as the routing problem. The task is to visit each node, while minimizing total travel distance. The simulation is inspired by [1] whereby dynamic programming is used to solve, and [2] where reinforcement learning is used to solve a tsp problem.</p>
+							<p> In this task Q-learning is used to solve an N-node(number of destinations) with graph embedding to represent the graph structure of visited nodes and paths. The system has no knowledge of the mathematics used in routing problems,
+								 or heuristics involved such as [3] where Concorde is used, with prior knowledge of the 
+								  It is solely dependent on training knowledge from sequences of multiple traversal of the different paths, then selecting the path with the best reward.
 								 Rewards are given for cumulated sequences, as the agent tries to minimize the total travel distance. </p>
 						</div>
 					</section>
