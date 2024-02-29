@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	https://youtu.be/FAXIKRKWC04
+
+-->
+<html>
+	<head>
+		<title>Generic - Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.column {
+				float: left;
+				width: 50.0%;
+				padding: 5px;
+			  }
+
+
+			  .row::after {
+				content: "";
+				clear: both;
+				display: table;
+			  }
+			</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">PortFolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper" >
+						<div class="inner">
+							<h1 class="major">Person detection and tracking in a hall using multiple 3d lidar configurations</h1>
+							<span class="image fit"><img src="images/live.png" alt=""  /></span>
+							<p> The purpose of this project was to track multiple people in realtime with a defined tracking space. Lidar was chosen for this type of tracking application as it is used in a dark hall and the only light is from animations displayed by the projectors. The surface of the hall is not flat, and tagets may be stationary, seated or moving. The positions is further streamed over ethernet to another system for a myriad of interactive applications. </p>
+							<p> The first phase requires merging lidar data, transformations are applied to cater for various lidar positioning.These are further combined to a single pointcloud that covers the enitire space.
+								<br>
+								Next, ground removal techniques are applied on merged pointcloud and cropped to focus on the region of interest using pcl library, then resulting pointcloud is further streamed to the next phase whereby deep learning techniques( using centerpoint) are applied to find the position of each person.
+								Each individual is given a unique id and a bounding box is drawn around the person. The id,x and y coordinates are then sent to the next phase, where they are used as inputs for unreal engine for an interactive experience, where dynamic animations are projected on the floors and walls. This solution was tested in simulation and with live data.
+								
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+			<section id="main3" class="wrapper">
+				<div class="inner">
+					<h2 class="major">Centerpoint detection framework</h2>
+
+                    <div class="row">
+                            <img src="images/centerpoint.png" alt="Snow" style="width:100%;height:100%">
+                    </div>
+                
+					<p>Above shows the two stage centerpoint model used to detect each individual. This is realtime and performed on ros topic as the data arrives. Thesolution does not require a map. </p>
+
+				</div>
+			</section>
+
+
+		<!-- Main-2b -->
+		<section id="main3" class="wrapper" style = "margin-left: 70px;">
+			<div class="inner">
+				<h2 class="major">Simulation of the hall in gazebo ros</h2>
+				<span class="image fit">
+
+					<iframe width="800" height="600"
+					src="assets/videos/gazebo.webm">
+					</iframe>
+
+
+				</span>
+				<p>Above shows a 3d model of the hall in gazebo</p>
+				
+
+			</div>
+		</section>
+
+
+
+			<!-- Main-3 -->
+			<section id="main3" class="wrapper" style = "margin-left: 70px;">
+				<div class="inner">
+					<h2 class="major">live sensor data and simualted results in rviz</h2>
+					<span class="image fit">
+
+						<iframe width="420" height="315"
+						src="assets/videos/clusters.webm">
+						</iframe>
+
+						<!-- https://youtu.be/-MlECIp7ieg -->
+
+						<iframe width="420" height="315"
+						src="assets/videos/detections.webm">
+						</iframe>
+
+
+
+					</span>
+					
+					<p>reference: https://arxiv.org/pdf/2006.11275.pdf </p>
+
+				</div>
+			</section>
+
+
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
