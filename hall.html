@@ -50,7 +50,7 @@
 							<h1 class="major">Person detection and tracking in a hall using multiple 3d lidar configurations</h1>
 							<span class="image fit"><img src="images/live.png" width= "70%" alt=""  /></span>
 							<p> The purpose of this project was to track multiple people in realtime with a defined tracking space. Lidar was chosen for this type of tracking application as it is used in a dark hall and the only light is from animations displayed by the projectors. The surface of the hall is not flat, and tagets may be stationary, seated or moving. The positions is further streamed over ethernet to another system for a myriad of interactive applications. </p>
-							<p> The first phase requires merging lidar data, transformations are applied to cater for various lidar positioning.These are further combined to a single pointcloud that covers the entire space.
+							<p> The first phase requires merging lidar data, transformations are applied to cater for various lidar positioning.These are further combined to a single pointcloud that covers the enitire space.
 								<br>
 								Next, ground removal techniques are applied on merged pointcloud and cropped to focus on the region of interest using pcl library, then resulting pointcloud is further streamed to the next phase whereby deep learning techniques( using centerpoint) are applied to find the position of each person.
 								Each individual is given a unique id and a bounding box is drawn around the person. The id,x and y coordinates are then sent to the next phase, where they are used as inputs for unreal engine for an interactive experience, where dynamic animations are projected on the floors and walls. This solution was tested in simulation and with live data.
@@ -69,7 +69,7 @@
                             <img src="images/centerpoint.png" alt="Snow" style="width:100%;height:100%">
                     </div>
                 
-					<p>Above shows the two stage centerpoint model used to detect each individual. This is realtime and performed on ros topic as the data arrives. The solution does not require a map. </p>
+					<p>Above shows the two stage centerpoint model used to detect each individual. This is realtime and performed on ros topic as the data arrives. Thesolution does not require a map. </p>
 
 				</div>
 			</section>
@@ -114,7 +114,6 @@
 
 
 					</span>
-					<p> In this solution two approaches are explored. Method 1) as in the left video shows tracking of clusters, by finding their respsective centroids, tracking with a kalaman filter finally passing coordinates, whilst method 2) on the right uses an AI based approach and using ceonterpoint to track realtime frames. Both methods can be used independtly where method 1 does not require any GPU, whilst method 2 requires a gpu. </p>
 					
 					<p>reference: https://arxiv.org/pdf/2006.11275.pdf </p>
 
