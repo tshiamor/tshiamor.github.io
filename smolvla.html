@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SmolVLA - Tshiamo Rakgowa Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Enhanced styling for the SmolVLA page */
+			.project-hero {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+			
+			.project-hero img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				margin-bottom: 1.5em;
+			}
+			
+			.video-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+				gap: 2em;
+				margin: 2.5em 0;
+			}
+			
+			.video-container {
+				background: rgba(255,255,255,0.05);
+				border-radius: 12px;
+				padding: 1.5em;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.video-container:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+			}
+			
+			.video-container iframe {
+				width: 100%;
+				height: 280px;
+				border-radius: 8px;
+				margin-bottom: 1em;
+			}
+			
+			.video-caption {
+				text-align: center;
+				font-style: italic;
+				color: #ccc;
+				margin-top: 1em;
+				padding: 0.5em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 6px;
+			}
+			
+			.features-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #9bf1ff;
+			}
+			
+			.features-section ul {
+				list-style: none;
+				padding: 0;
+			}
+			
+			.features-section li {
+				margin-bottom: 1em;
+				padding: 0.8em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 8px;
+				transition: background 0.3s ease;
+			}
+			
+			.features-section li:hover {
+				background: rgba(255,255,255,0.08);
+			}
+			
+			.architecture-section {
+				text-align: center;
+				margin: 3em 0;
+			}
+			
+			.architecture-section img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 12px;
+				box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+				margin: 1.5em 0;
+			}
+			
+			.references-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #ff6b6b;
+			}
+			
+			.references-section h3 {
+				color: #9bf1ff;
+				margin-bottom: 1em;
+			}
+			
+			.references-section a {
+				color: #ff6b6b;
+				text-decoration: none;
+				font-weight: 600;
+			}
+			
+			.references-section a:hover {
+				color: #fff;
+				text-decoration: underline;
+			}
+			
+			.bibtex-code {
+				background: #1a1a1a !important;
+				color: #e0e0e0 !important;
+				padding: 1.5em !important;
+				font-size: 0.9em !important;
+				overflow-x: auto !important;
+				border-radius: 8px !important;
+				border: 1px solid #333 !important;
+				margin-top: 1em !important;
+				font-family: 'Courier New', monospace !important;
+			}
+			
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(90deg, transparent, #9bf1ff, transparent);
+				margin: 3em 0;
+				border-radius: 1px;
+			}
+			
+			.content-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #4CAF50;
+			}
+			
+			.content-section h2 {
+				color: #4CAF50;
+				margin-bottom: 1em;
+			}
+			
+			.content-section ol {
+				padding-left: 1.5em;
+			}
+			
+			.content-section ol li {
+				margin-bottom: 0.8em;
+				padding: 0.5em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 6px;
+			}
+			
+			@media (max-width: 768px) {
+				.video-grid {
+					grid-template-columns: 1fr;
+					gap: 1.5em;
+				}
+				
+				.video-container {
+					padding: 1em;
+				}
+				
+				.video-container iframe {
+					height: 220px;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tshiamo Rakgowa Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="smolvla.html" class="active">SmolVLA</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<div class="project-hero">
+								<h1 class="major">SmolVLA: Vision-Language-Action Model for Affordable Robotics</h1>
+								<img src="images/workspace_setup.jpg" alt="SmolVLA" />
+								<p style="font-size: 1.1em; line-height: 1.6; color: #ccc;">
+									A compact, efficient, and community-driven Vision-Language-Action (VLA) model that enables natural language-driven perception and control for robotics applications.
+								</p>
+							</div>
+
+							<div class="content-section">
+								<h2>Project Overview</h2>
+								<p>SmolVLA is a compact, efficient, and community-driven Vision-Language-Action (VLA) model that enables natural language-driven perception and control for robotics applications. Unlike existing massive VLA models with billions of parameters, SmolVLA is designed to be trained on a single GPU and deployed on consumer-grade hardware or even CPUs, making it accessible to a broader robotics community.</p>
+							</div>
+
+							<div class="features-section">
+								<h2>Key Features</h2>
+								<ul>
+									<li><strong>Compact Architecture:</strong> Significantly smaller than existing VLAs while maintaining competitive performance</li>
+									<li><strong>Efficient Training:</strong> Can be trained on a single GPU, reducing computational costs</li>
+									<li><strong>Accessible Deployment:</strong> Runs on consumer-grade GPUs or CPUs</li>
+									<li><strong>Asynchronous Inference:</strong> Decouples perception and action prediction from execution for higher control rates</li>
+									<li><strong>Community-Driven:</strong> Built on public community datasets from affordable robotic platforms</li>
+									<li><strong>Flow Matching:</strong> Uses advanced training techniques for improved action generation</li>
+								</ul>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="content-section">
+								<h2>Technical Architecture</h2>
+								<div style="text-align: center; margin: 2em 0;">
+									<img src="images/smolVLA.png" alt="SmolVLA Architecture" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+									<p style="font-style: italic; color: #ccc; margin-top: 1em;">SmolVLA Architecture Overview</p>
+								</div>
+								<p>SmolVLA consists of a compact pretrained vision-language model with a specialized Action Expert that processes three types of inputs:</p>
+								<ol>
+									<li><strong>Language Instructions:</strong> Natural language commands for task execution</li>
+									<li><strong>RGB Images:</strong> Visual observations from robot cameras</li>
+									<li><strong>Robot Sensorimotor State:</strong> Current robot joint positions and sensor data</li>
+								</ol>
+								<p>The model uses alternating cross-attention and self-attention blocks to generate low-level action sequences, enabling precise robotic control through natural language instructions.</p>
+							</div>
+
+							<div class="features-section">
+								<h2>Key Technical Features</h2>
+								<ul>
+									<li><strong>Lightweight Architecture:</strong> Only 450 million parameters (100M for action expert) vs. billions in other VLAs</li>
+									<li><strong>Single GPU Training:</strong> Designed to train on a single GPU and deploy on consumer hardware</li>
+									<li><strong>Layer Skipping:</strong> Uses features from earlier VLM layers to halve computational cost</li>
+									<li><strong>Minimal Visual Tokens:</strong> Only 64 tokens per frame with pixel shuffle operation</li>
+									<li><strong>Flow Matching:</strong> Better inductive bias for complex action distributions</li>
+									<li><strong>Asynchronous Inference:</strong> 30% faster task completion with decoupled processing</li>
+								</ul>
+							</div>
+
+							<div class="content-section">
+								<h2>Architecture Components</h2>
+								<ol>
+									<li><strong>Compact Pretrained VLM:</strong> Uses SmolVLM-2 backbone optimized for multi-image inputs</li>
+									<li><strong>Action Expert:</strong> Alternating cross-attention and self-attention blocks</li>
+									<li><strong>Three Input Types:</strong>
+										<ul>
+											<li>Natural language instructions</li>
+											<li>RGB camera observations</li>
+											<li>Robot sensorimotor state (projected to token space)</li>
+										</ul>
+									</li>
+									<li><strong>Chunked Action Generation:</strong> Outputs n low-level actions per prediction</li>
+								</ol>
+							</div>
+
+							<div class="features-section">
+								<h2>Community-Driven Training</h2>
+								<ul>
+									<li><strong>Public Datasets:</strong> Trained on community-contributed datasets from affordable platforms</li>
+									<li><strong>Smaller Scale:</strong> Only ~30k episodes (10.6M frames) vs. millions in other VLAs</li>
+									<li><strong>Data Standardization:</strong> Handles noisy annotations and variable camera conventions</li>
+									<li><strong>Real-World Focus:</strong> Designed for practical deployment on low-cost robots</li>
+								</ul>
+							</div>
+
+							<div class="content-section">
+								<h2>Performance Highlights</h2>
+								<ul>
+									<li><strong>Competitive Results:</strong> Matches or exceeds VLAs 10× larger in size</li>
+									<li><strong>Benchmark Success:</strong> Strong performance on LIBERO, Meta-World, SO-100, and SO-101</li>
+									<li><strong>Knowledge Transfer:</strong> Effective multitask fine-tuning and cross-task learning</li>
+									<li><strong>Real Robot Validation:</strong> Tested and validated on actual robotic platforms</li>
+								</ul>
+							</div>
+
+							<div class="video-grid">
+								<div class="video-container">
+									<iframe src="https://www.youtube.com/embed/JWCrq30CkoM" title="SmolVLA Video 1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<div class="video-caption">
+										<strong>Demonstration Video 1:</strong> SmolVLA in action
+									</div>
+								</div>
+								<div class="video-container">
+									<iframe src="https://www.youtube.com/embed/AJx7cO890G8" title="SmolVLA Video 2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<div class="video-caption">
+										<strong>Demonstration Video 2:</strong> Advanced capabilities showcase
+									</div>
+								</div>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="references-section">
+								<h2>Resources & References</h2>
+								<h3>Academic Paper</h3>
+								<p><strong>Citation:</strong></p>
+								<pre class="bibtex-code">@article{shukor2025smolvla,
+  title={SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics},
+  author={Shukor, Mustafa and Aubakirova, Dana and Capuano, Francesco and Kooijmans, Pepijn and Palma, Steven and Zouitine, Adil and Aractingi, Michel and Pascal, Caroline and Russi, Martino and Marafioti, Andres and Alibert, Simon and Cord, Matthieu and Wolf, Thomas and Cadene, Remi},
+  journal={arXiv preprint arXiv:2506.01844},
+  year={2025}
+}</pre>
+								<p><strong>Paper Link:</strong> <a href="https://arxiv.org/pdf/2506.01844" target="_blank">https://arxiv.org/pdf/2506.01844</a></p>
+								
+								<h3>Code Repository</h3>
+								<p><strong>GitHub Repository:</strong> <a href="https://github.com/huggingface/lerobot" target="_blank">https://github.com/huggingface/lerobot</a></p>
+								<p>The repository contains the complete implementation, pretrained models, and training data for SmolVLA, making it fully reproducible and accessible to the robotics research community.</p>
+							</div>
+
+							<div class="content-section">
+								<h2>Impact & Significance</h2>
+								<p>SmolVLA represents a significant step toward democratizing robotics AI by making powerful vision-language-action capabilities accessible to researchers and developers with limited computational resources. Its open-source nature and efficient design contribute to the broader goal of transparent, reproducible robotics research that can accelerate progress in the field.</p>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Tshiamo Rakgowa. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html> 

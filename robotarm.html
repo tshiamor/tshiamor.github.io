@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Robot Arm Pick and Place - Tshiamo Rakgowa Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Enhanced styling for the Robot Arm page */
+			.project-hero {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+			
+			.project-hero img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				margin-bottom: 1.5em;
+			}
+			
+			.video-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+				gap: 2em;
+				margin: 2.5em 0;
+			}
+			
+			.video-container {
+				background: rgba(255,255,255,0.05);
+				border-radius: 12px;
+				padding: 1.5em;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.video-container:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+			}
+			
+			.video-container iframe {
+				width: 100%;
+				height: 280px;
+				border-radius: 8px;
+				margin-bottom: 1em;
+			}
+			
+			.video-caption {
+				text-align: center;
+				font-style: italic;
+				color: #ccc;
+				margin-top: 1em;
+				padding: 0.5em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 6px;
+			}
+			
+			.features-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #9bf1ff;
+			}
+			
+			.features-section ul {
+				list-style: none;
+				padding: 0;
+			}
+			
+			.features-section li {
+				margin-bottom: 1em;
+				padding: 0.8em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 8px;
+				transition: background 0.3s ease;
+			}
+			
+			.features-section li:hover {
+				background: rgba(255,255,255,0.08);
+			}
+			
+			.dataset-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #4CAF50;
+			}
+			
+			.dataset-section h2 {
+				color: #4CAF50;
+				margin-bottom: 1em;
+			}
+			
+			.dataset-section a {
+				color: #4CAF50;
+				text-decoration: none;
+				font-weight: 600;
+			}
+			
+			.dataset-section a:hover {
+				color: #fff;
+				text-decoration: underline;
+			}
+			
+			.dataset-section ul {
+				list-style: none;
+				padding: 0;
+			}
+			
+			.dataset-section li {
+				margin-bottom: 0.8em;
+				padding: 0.5em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 6px;
+			}
+			
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(90deg, transparent, #9bf1ff, transparent);
+				margin: 3em 0;
+				border-radius: 1px;
+			}
+			
+			@media (max-width: 768px) {
+				.video-grid {
+					grid-template-columns: 1fr;
+					gap: 1.5em;
+				}
+				
+				.video-container {
+					padding: 1em;
+				}
+				
+				.video-container iframe {
+					height: 220px;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tshiamo Rakgowa Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="robotarm.html" class="active">Robot Arm Pick and Place</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<div class="project-hero">
+								<h1 class="major">Robot Arm Pick and Place</h1>
+								<img src="images/workspace_setup.jpg" alt="Robot Arm Pick and Place" />
+								<p style="font-size: 1.1em; line-height: 1.6; color: #ccc;">
+									Advanced testing platform for evaluating foundation models and camera configurations on robotic pick and place tasks. Supports multiple state-of-the-art models and flexible camera setups for optimal training performance.
+								</p>
+							</div>
+
+							<div class="features-section">
+								<h2>Project Overview</h2>
+								<p>This project serves as a comprehensive testing platform for evaluating different foundation models and robotic learning approaches. The system is designed to test various state-of-the-art models including Pi Zero, Octo, GROOT N1.5, ACT, Diffusion, and SmolVLA on real-world pick and place tasks. Additionally, it provides a flexible platform for testing optimal camera configurations, allowing reconfiguration between 2-camera and 5-camera setups to determine the best angles for training. The platform also supports experimentation with different telepresence approaches using MoveIt, CuRobo, and VR technologies including Apple Vision Pro, along with augmented data testing for enhanced model training.</p>
+								
+								<h3>Key Features:</h3>
+								<ul>
+									<li>Foundation model testing platform (Pi Zero, Octo, GROOT N1.5, ACT, Diffusion, SmolVLA, etc)</li>
+									<li>Flexible camera configuration testing (2-camera and 5-camera setups)</li>
+									<li>Gripper control for secure handling</li>
+									<li>Telepresence experimentation (MoveIt, CuRobo, VR with Vision Pro)</li>
+									<li>Augmented data testing and generation</li>
+									<li>Dataset collection and model evaluation framework</li>
+									<li>Comparative analysis of different model architectures</li>
+								</ul>
+							</div>
+
+							<div class="video-grid">
+								<div class="video-container">
+									<iframe src="https://www.youtube.com/embed/jeOMLxvYXUQ?autoplay=1&mute=1" title="Robot Arm Pick and Place Video 1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<div class="video-caption">
+										<strong>Demonstration Video 1:</strong> Pick and place operations
+									</div>
+								</div>
+								<div class="video-container">
+									<iframe src="https://www.youtube.com/embed/_dfIxxOly1Y?autoplay=1&mute=1" title="Robot Arm Pick and Place Video 2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<div class="video-caption">
+										<strong>Demonstration Video 2:</strong> Advanced automation tasks
+									</div>
+								</div>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="dataset-section">
+								<h2>Dataset: RealSense Black-Green Background LeRobot</h2>
+								<p>This project uses a custom dataset hosted on Hugging Face:</p>
+								<p><a href="https://huggingface.co/datasets/tshiamor/realsense-black-green-background-lerobot" target="_blank">https://huggingface.co/datasets/tshiamor/realsense-black-green-background-lerobot</a></p>
+								
+								<h3>Description:</h3>
+								<p>The <strong>realsense-black-green-background-lerobot</strong> dataset contains a series of episodes recorded with a robot and multiple cameras, specifically designed for robotics and imitation learning tasks. The dataset features video data of a robot arm (phosphobot, so100, phospho-dk) performing pick and place operations against a black and green background. It is compatible with LeRobot and RLDS, and can be used to train policies using imitation learning techniques.</p>
+								
+								<h3>Dataset Specifications:</h3>
+								<ul>
+									<li>Number of episodes: 300</li>
+									<li>Modalities: Video</li>
+									<li>Tags: phosphobot, so100, phospho-dk</li>
+									<li>Size: &lt; 1K</li>
+									<li>Direct dataset page: <a href="https://huggingface.co/datasets/tshiamor/realsense-black-green-background-lerobot" target="_blank">View on Hugging Face</a></li>
+									<li>Browse files: <a href="https://huggingface.co/datasets/tshiamor/realsense-black-green-background-lerobot/tree/main" target="_blank">Dataset Files & Tree</a></li>
+								</ul>
+								
+								<p style="font-size: 0.95em; color: #999; margin-top: 1em;">
+									This dataset is ideal for robotics research, especially for training and evaluating pick and place tasks using vision-based policies. For more details, visit the <a href="https://huggingface.co/datasets/tshiamor/realsense-black-green-background-lerobot" target="_blank">dataset page</a>.
+								</p>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Tshiamo Rakgowa. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html> 

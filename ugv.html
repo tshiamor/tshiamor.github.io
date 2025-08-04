@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>AGV - Tshiamo Rakgowa Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Enhanced styling for the AGV page */
+			.project-hero {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+			
+			.project-hero img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				margin-bottom: 1.5em;
+			}
+			
+			.content-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #9bf1ff;
+			}
+			
+			.content-section h2 {
+				color: #9bf1ff;
+				margin-bottom: 1em;
+			}
+			
+			.image-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 1.5em;
+				margin: 2em 0;
+			}
+			
+			.image-container {
+				background: rgba(255,255,255,0.05);
+				border-radius: 12px;
+				padding: 1em;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.image-container:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+			}
+			
+			.image-container img {
+				width: 100%;
+				height: auto;
+				border-radius: 8px;
+			}
+			
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(90deg, transparent, #9bf1ff, transparent);
+				margin: 3em 0;
+				border-radius: 1px;
+			}
+			
+			@media (max-width: 768px) {
+				.image-grid {
+					grid-template-columns: 1fr;
+					gap: 1em;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tshiamo Rakgowa Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="ugv.html" class="active">AGV</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<div class="project-hero">
+								<h1 class="major">AGV (Automated Guided Vehicle)</h1>
+								<img src="images/ugv1_1280x960.jpg" alt="AGV" />
+								<p style="font-size: 1.1em; line-height: 1.6; color: #ccc;">
+									AGV built by modifying an RC car, equipped with lidar, camera, IMU and various sensors for autonomous navigation.
+								</p>
+							</div>
+
+							<div class="content-section">
+								<h2>Project Overview</h2>
+								<p>Advanced Automated Guided Vehicle (AGV) system developed by modifying an RC car platform. The vehicle is equipped with a comprehensive sensor suite including lidar, cameras, and IMU for precise autonomous navigation and mapping capabilities.</p>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="content-section">
+								<h2>Technical Specifications</h2>
+								<div class="image-grid">
+									<div class="image-container">
+										<img src="images/ugv1_1280x960.jpg" alt="AGV View 1" />
+									</div>
+									<div class="image-container">
+										<img src="images/ugv1_1280x960.jpg" alt="AGV View 2" />
+									</div>
+								</div>
+								
+								<h3>Sensor Suite</h3>
+								<ul>
+									<li><strong>Lidar Sensor:</strong> 2D/3D lidar for environment mapping and obstacle detection</li>
+									<li><strong>Camera System:</strong> RGB camera for visual perception and navigation</li>
+									<li><strong>IMU (Inertial Measurement Unit):</strong> Accelerometer and gyroscope for orientation and motion tracking</li>
+									<li><strong>Additional Sensors:</strong> Various environmental and position sensors</li>
+								</ul>
+								
+								<h3>Key Features</h3>
+								<ul>
+									<li><strong>Autonomous Navigation:</strong> Self-driving capabilities with path planning</li>
+									<li><strong>SLAM Technology:</strong> Simultaneous Localization and Mapping</li>
+									<li><strong>Obstacle Avoidance:</strong> Real-time obstacle detection and avoidance</li>
+									<li><strong>Modular Design:</strong> Easily configurable and upgradeable platform</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Tshiamo Rakgowa. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Autonomous Differential Drive Robot - Tshiamo Rakgowa Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Enhanced styling for the 4WheelDrive page */
+			.project-hero {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+			
+			.project-hero img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				margin-bottom: 1.5em;
+			}
+			
+			.platform-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #9bf1ff;
+			}
+			
+			.platform-section h2 {
+				color: #9bf1ff;
+				margin-bottom: 1em;
+			}
+			
+			.image-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 1.5em;
+				margin: 2em 0;
+			}
+			
+			.image-container {
+				background: rgba(255,255,255,0.05);
+				border-radius: 12px;
+				padding: 1em;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.image-container:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+			}
+			
+			.image-container img {
+				width: 100%;
+				height: auto;
+				border-radius: 8px;
+			}
+			
+			.content-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #4CAF50;
+			}
+			
+			.content-section h2 {
+				color: #4CAF50;
+				margin-bottom: 1em;
+			}
+			
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(90deg, transparent, #9bf1ff, transparent);
+				margin: 3em 0;
+				border-radius: 1px;
+			}
+			
+			@media (max-width: 768px) {
+				.image-grid {
+					grid-template-columns: 1fr;
+					gap: 1em;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tshiamo Rakgowa Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="4wheeldrive.html" class="active">Autonomous Differential Drive Robot</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<div class="project-hero">
+								<h1 class="major">Autonomous Differential Drive Robot</h1>
+								<img src="images/diff1.jpeg" alt="Autonomous Differential Drive Robot" />
+								<p style="font-size: 1.1em; line-height: 1.6; color: #ccc;">
+									A mobile platform equipped with various sensors, able to autonomously move to any number of destinations within a map, while avoiding obstacles.
+								</p>
+							</div>
+
+							<div class="content-section">
+								<h2>Project Overview</h2>
+								<p>This mobile platform is used for mapping and testing different SLAM approaches. The platform is configured for dead reckoning using its encoders, set up for gmapping SLAM with lidar and odometry or rtabmap with the use of the calibrated camera.</p>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="platform-section">
+								<h2>Platform Specifications</h2>
+								<div class="image-grid">
+									<div class="image-container">
+										<img src="images/diff4.jpeg" alt="Platform View 1" />
+									</div>
+									<div class="image-container">
+										<img src="images/diff_cover2.jpg" alt="Platform View 2" />
+									</div>
+								</div>
+								
+								<h3>Technical Implementation</h3>
+								<p>Gmapping nodes run on the robot (NVIDIA Jetson) and use a 2D lidar to build a map, whilst publishing odometry of the robot and its IMU data (orientation), respectively to the odometry and transforms topics.</p>
+								
+								<p>The map server runs on the actual robot, whilst a different computer in the network is used to view the live map and location of the robot during the live map on RViz. At localization stage, using AMCL (Adaptive Monte Carlo Localization) packages, the robot can be assigned a global goal to reach, whereby it will iteratively work out both local and global cost maps to reach the destination.</p>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Tshiamo Rakgowa. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

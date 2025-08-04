@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	https://youtu.be/FAXIKRKWC04
+
+-->
+<html>
+	<head>
+		<title>Person Detection and Tracking - Tshiamo Rakgowa Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Enhanced styling for the Hall page */
+			.project-hero {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+			
+			.project-hero img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				margin-bottom: 1.5em;
+			}
+			
+			.content-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #9bf1ff;
+			}
+			
+			.content-section h2 {
+				color: #9bf1ff;
+				margin-bottom: 1em;
+			}
+			
+			.framework-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #4CAF50;
+			}
+			
+			.framework-section h2 {
+				color: #4CAF50;
+				margin-bottom: 1em;
+			}
+			
+			.framework-section img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 12px;
+				box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+				margin: 1.5em 0;
+			}
+			
+			.simulation-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #ff6b6b;
+			}
+			
+			.simulation-section h2 {
+				color: #ff6b6b;
+				margin-bottom: 1em;
+			}
+			
+			.video-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+				gap: 2em;
+				margin: 2.5em 0;
+			}
+			
+			.video-container {
+				background: rgba(255,255,255,0.05);
+				border-radius: 12px;
+				padding: 1.5em;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.video-container:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+			}
+			
+			.video-container iframe {
+				width: 100%;
+				height: 400px;
+				border-radius: 8px;
+				margin-bottom: 1em;
+			}
+			
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(90deg, transparent, #9bf1ff, transparent);
+				margin: 3em 0;
+				border-radius: 1px;
+			}
+			
+			.reference-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #ff9800;
+			}
+			
+			.reference-section a {
+				color: #ff9800;
+				text-decoration: none;
+				font-weight: 600;
+			}
+			
+			.reference-section a:hover {
+				color: #fff;
+				text-decoration: underline;
+			}
+			
+			@media (max-width: 768px) {
+				.video-grid {
+					grid-template-columns: 1fr;
+					gap: 1.5em;
+				}
+				
+				.video-container {
+					padding: 1em;
+				}
+				
+				.video-container iframe {
+					height: 300px;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tshiamo Rakgowa Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="hall.html" class="active">Person Detection and Tracking</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<div class="project-hero">
+								<h1 class="major">Person Detection and Tracking in a Hall using Multiple 3D Lidar Configurations</h1>
+								<img src="images/live.png" alt="Person Detection and Tracking" />
+								<p style="font-size: 1.1em; line-height: 1.6; color: #ccc;">
+									Advanced multi-person tracking system using 6 Livox lidars to detect and track people in real-time within a hall environment.
+								</p>
+							</div>
+
+							<div class="content-section">
+								<h2>Project Overview</h2>
+								<p>The purpose of this project was to track multiple people in real-time with a defined tracking space. Lidar was chosen for this type of tracking application as it is used in a dark hall and the only light is from animations displayed by the projectors. The surface of the hall is not flat, and targets may be stationary, seated or moving. The positions are further streamed over ethernet to another system for a myriad of interactive applications.</p>
+								
+								<h3>Technical Process</h3>
+								<p>The first phase requires merging lidar data, transformations are applied to cater for various lidar positioning. These are further combined to a single pointcloud that covers the entire space.</p>
+								
+								<p>Next, ground removal techniques are applied on merged pointcloud and cropped to focus on the region of interest using PCL library, then resulting pointcloud is further streamed to the next phase whereby deep learning techniques (using CenterPoint) are applied to find the position of each person.</p>
+								
+								<p>Each individual is given a unique ID and a bounding box is drawn around the person. The ID, x and y coordinates are then sent to the next phase, where they are used as inputs for Unreal Engine for an interactive experience, where dynamic animations are projected on the floors and walls. This solution was tested in simulation and with live data.</p>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="framework-section">
+								<h2>CenterPoint Detection Framework</h2>
+								<img src="images/centerpoint.png" alt="CenterPoint Detection Framework" />
+								<p>Above shows the two stage CenterPoint model used to detect each individual. This is real-time and performed on ROS topic as the data arrives. The solution does not require a map.</p>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="simulation-section">
+								<h2>Simulation of the Hall in Gazebo ROS</h2>
+								<div class="video-container">
+									<iframe src="assets/videos/gazebo.webm" title="Gazebo Simulation"></iframe>
+								</div>
+								<p>Above shows a 3D model of the hall in Gazebo</p>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="simulation-section">
+								<h2>Live Sensor Data and Simulated Results in RViz</h2>
+								<div class="video-grid">
+									<div class="video-container">
+										<iframe src="assets/videos/clusters.webm" title="Clusters Visualization"></iframe>
+									</div>
+									<div class="video-container">
+										<iframe src="assets/videos/detections.mp4" title="Detection Results"></iframe>
+									</div>
+								</div>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="reference-section">
+								<h2>References</h2>
+								<p><strong>Research Paper:</strong> <a href="https://arxiv.org/pdf/2006.11275.pdf" target="_blank">https://arxiv.org/pdf/2006.11275.pdf</a></p>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Tshiamo Rakgowa. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
