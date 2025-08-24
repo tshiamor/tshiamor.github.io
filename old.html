@@ -146,6 +146,84 @@
 						</div>
 					</section>
 
+					<div class="section-divider"></div>
+
+					<!-- Semi Autonomous Military Drone Section -->
+					<section id="main3" class="wrapper">
+						<div class="inner">
+							<div class="content-section">
+								<h2>Semi autonomous military drone (version one)</h2>
+								<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5em; margin: 2em 0;">
+									<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 1em;">
+										<iframe width="100%" height="315" src="https://www.youtube.com/embed/asiD6vuezAQ?mute=1" style="border-radius: 8px;" frameborder="0" allowfullscreen></iframe>
+									</div>
+									<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 1em;">
+										<iframe width="100%" height="315" src="https://www.youtube.com/embed/wCnB_cxXssY?mute=1" style="border-radius: 8px;" frameborder="0" allowfullscreen></iframe>
+									</div>
+								</div>
+								<p>Above video shows the first stage of the differential drive drone. It has two cameras, one below to aid in manual drive whilst the top camera is to detect human faces. Once the top camera detects a human face, the bottom camera searches for a weapon using computer vision. In the demo a toy gun resembles the weapon to search for, once the weapon is detected a firing sound (audio file is played). It further supports both manual and autonomous driving.</p>
+								
+								<div style="display: flex; justify-content: center; margin: 2em 0;">
+									<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 1em; max-width: 560px;">
+										<iframe width="100%" height="315" src="https://www.youtube.com/embed/FAKnRBMsJE8?mute=1" style="border-radius: 8px;" frameborder="0" allowfullscreen></iframe>
+									</div>
+								</div>
+								<p>The robot can be driven remotely using a joystick over wifi on a client computer. To achieve autonomous driving it has a high precision 1D gyro and encoders for dead reckoning drive. The goal location is provided in the client computer gui, this is done by specifying the target x and y coordinates in metres. It is able to avoid obstacles whilst going towards the target location. Three Infra-red Ranger sensors in the front are used to detect obstacles and re-adjust its path to the target.</p>
+							</div>
+						</div>
+					</section>
+
+					<div class="section-divider"></div>
+
+					<!-- Color Tracking Section -->
+					<section id="main2" class="wrapper">
+						<div class="inner">
+							<div class="content-section">
+								<h2>Color tracking using differential drive robot</h2>
+								<div style="display: flex; justify-content: center; margin: 2em 0;">
+									<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 1em; max-width: 560px;">
+										<iframe width="100%" height="315" src="https://www.youtube.com/embed/-5lGyUD9pOg?mute=1" style="border-radius: 8px;" frameborder="0" allowfullscreen></iframe>
+									</div>
+								</div>
+								<p>Robot that uses computer vision to track and follow a blue cup. It will only move towards the blue cup and ignores anything else in the scene.</p>
+								<p>This uses a USB camera and computer vision precisely blob detection. The desired color range (blue cup hue and its shades) is trimmed from the HSV color chart. Circle hough transform is applied to detect the desired blob.</p>
+							</div>
+						</div>
+					</section>
+
+					<div class="section-divider"></div>
+
+					<!-- Object Tracking Section -->
+					<section id="main3" class="wrapper">
+						<div class="inner">
+							<div class="content-section">
+								<h2>Object tracking using vision</h2>
+								<div style="display: flex; justify-content: center; margin: 2em 0;">
+									<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 1em; max-width: 560px;">
+										<iframe width="100%" height="315" src="https://www.youtube.com/embed/Ba6Dv_c5ndk?mute=1" style="border-radius: 8px;" frameborder="0" allowfullscreen></iframe>
+									</div>
+								</div>
+								<p>Above robot is able to track a known object and drive towards it (in this case a coke can). Computation is done using OpenCV on a remote laptop. Computed results are sent to the robot using socket programming.</p>
+								<p>SURF algorithm is used to detect the coke can features. Once sufficient features are detected, the robot then drives towards the can. The robot runs on a beagle bone single board computer, which handles communication with the remote computer and serially communicates desired velocities to a PIC microcontroller. The PIC microcontroller then directly interfaces the speed controller board and sets each wheel's PWM and direction.</p>
+							</div>
+						</div>
+					</section>
+
+					<div class="section-divider"></div>
+
+					<!-- Additional Section -->
+					<section id="two" class="wrapper">
+						<div class="inner">
+							<div class="content-section">
+								<div class="image-grid">
+									<div class="image-container">
+										<img src="images/ugv4.jpg" alt="UGV Additional View" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
 			</div>
 
 		<!-- Footer -->
