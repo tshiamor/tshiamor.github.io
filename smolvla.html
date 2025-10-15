@@ -214,19 +214,22 @@
 
 							<div class="content-section">
 								<h2>Project Overview</h2>
-								<p>SmolVLA is a compact, efficient, and community-driven Vision-Language-Action (VLA) model that enables natural language-driven perception and control for robotics applications. Unlike existing massive VLA models with billions of parameters, SmolVLA is designed to be trained on a single GPU and deployed on consumer-grade hardware or even CPUs, making it accessible to a broader robotics community.</p>
+								<p>SmolVLA is a compact, efficient, and community-driven Vision-Language-Action (VLA) model that enables natural language-driven perception and control for robotics applications. Unlike existing massive VLA models with billions of parameters, SmolVLA is designed to be trained on a single GPU and deployed on consumer-grade hardware or even CPUs.</p>
 							</div>
 
-							<div class="features-section">
-								<h2>Key Features</h2>
-								<ul>
-									<li><strong>Compact Architecture:</strong> Significantly smaller than existing VLAs while maintaining competitive performance</li>
-									<li><strong>Efficient Training:</strong> Can be trained on a single GPU, reducing computational costs</li>
-									<li><strong>Accessible Deployment:</strong> Runs on consumer-grade GPUs or CPUs</li>
-									<li><strong>Asynchronous Inference:</strong> Decouples perception and action prediction from execution for higher control rates</li>
-									<li><strong>Community-Driven:</strong> Built on public community datasets from affordable robotic platforms</li>
-									<li><strong>Flow Matching:</strong> Uses advanced training techniques for improved action generation</li>
-								</ul>
+							<div class="video-grid">
+								<div class="video-container">
+									<iframe src="https://www.youtube.com/embed/JWCrq30CkoM" title="SmolVLA Video 1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<div class="video-caption">
+										<strong>Demonstration Video 1:</strong> SmolVLA in action
+									</div>
+								</div>
+								<div class="video-container">
+									<iframe src="https://www.youtube.com/embed/AJx7cO890G8" title="SmolVLA Video 2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<div class="video-caption">
+										<strong>Demonstration Video 2:</strong> Advanced capabilities showcase
+									</div>
+								</div>
 							</div>
 
 							<div class="section-divider"></div>
@@ -274,42 +277,15 @@
 								</ol>
 							</div>
 
-							<div class="features-section">
-								<h2>Community-Driven Training</h2>
-								<ul>
-									<li><strong>Public Datasets:</strong> Trained on community-contributed datasets from affordable platforms</li>
-									<li><strong>Smaller Scale:</strong> Only ~30k episodes (10.6M frames) vs. millions in other VLAs</li>
-									<li><strong>Data Standardization:</strong> Handles noisy annotations and variable camera conventions</li>
-									<li><strong>Real-World Focus:</strong> Designed for practical deployment on low-cost robots</li>
-								</ul>
-							</div>
-
-							<div class="content-section">
+<div class="content-section">
 								<h2>Performance Highlights</h2>
 								<ul>
 									<li><strong>Competitive Results:</strong> Matches or exceeds VLAs 10× larger in size</li>
-									<li><strong>Benchmark Success:</strong> Strong performance on LIBERO, Meta-World, SO-100, and SO-101</li>
+									<li><strong>Benchmark Success:</strong> Strong performance on LeRobot and SO-101</li>
 									<li><strong>Knowledge Transfer:</strong> Effective multitask fine-tuning and cross-task learning</li>
 									<li><strong>Real Robot Validation:</strong> Tested and validated on actual robotic platforms</li>
 								</ul>
 							</div>
-
-							<div class="video-grid">
-								<div class="video-container">
-									<iframe src="https://www.youtube.com/embed/JWCrq30CkoM" title="SmolVLA Video 1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-									<div class="video-caption">
-										<strong>Demonstration Video 1:</strong> SmolVLA in action
-									</div>
-								</div>
-								<div class="video-container">
-									<iframe src="https://www.youtube.com/embed/AJx7cO890G8" title="SmolVLA Video 2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-									<div class="video-caption">
-										<strong>Demonstration Video 2:</strong> Advanced capabilities showcase
-									</div>
-								</div>
-							</div>
-
-							<div class="section-divider"></div>
 
 							<div class="references-section">
 								<h2>Resources & References</h2>
@@ -327,11 +303,13 @@
 								<p><strong>GitHub Repository:</strong> <a href="https://github.com/huggingface/lerobot" target="_blank">https://github.com/huggingface/lerobot</a></p>
 								<p>The repository contains the complete implementation, pretrained models, and training data for SmolVLA, making it fully reproducible and accessible to the robotics research community.</p>
 							</div>
-
+							<!--
 							<div class="content-section">
 								<h2>Impact & Significance</h2>
 								<p>SmolVLA represents a significant step toward democratizing robotics AI by making powerful vision-language-action capabilities accessible to researchers and developers with limited computational resources. Its open-source nature and efficient design contribute to the broader goal of transparent, reproducible robotics research that can accelerate progress in the field.</p>
 							</div>
+						-->
+
 						</div>
 					</section>
 
