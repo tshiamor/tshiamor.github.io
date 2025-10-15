@@ -183,6 +183,12 @@
 								<p>Next, ground removal techniques are applied on merged pointcloud and cropped to focus on the region of interest using PCL library, then resulting pointcloud is further streamed to the next phase whereby deep learning techniques (using CenterPoint) are applied to find the position of each person.</p>
 								
 								<p>Each individual is given a unique ID and a bounding box is drawn around the person. The ID, x and y coordinates are then sent to the next phase, where they are used as inputs for Unreal Engine for an interactive experience, where dynamic animations are projected on the floors and walls. This solution was tested in simulation and with live data.</p>
+
+								<h3>Process Flow Diagram</h3>
+								<div style="text-align: center; margin: 2em 0;">
+									<img src="images/process.png" alt="Process Flow Diagram" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+									<p style="font-style: italic; color: #ccc; margin-top: 1em;">Complete pipeline from lidar data acquisition to interactive visualization</p>
+								</div>
 							</div>
 
 							<div class="section-divider"></div>
