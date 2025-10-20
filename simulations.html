@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Robot Simulations - Tshiamo Rakgowa Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Enhanced styling for the Simulations page */
+			.project-hero {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+
+			.project-hero img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				margin-bottom: 1.5em;
+			}
+
+			.video-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+				gap: 2em;
+				margin: 2.5em 0;
+			}
+
+			.video-container {
+				background: rgba(255,255,255,0.05);
+				border-radius: 12px;
+				padding: 1.5em;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.video-container:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+			}
+
+			.video-container iframe {
+				width: 100%;
+				height: 280px;
+				border-radius: 8px;
+				margin-bottom: 1em;
+			}
+
+			.video-caption {
+				text-align: center;
+				font-style: italic;
+				color: #ccc;
+				margin-top: 1em;
+				padding: 0.5em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 6px;
+			}
+
+			.features-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #9bf1ff;
+			}
+
+			.features-section ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			.features-section li {
+				margin-bottom: 1em;
+				padding: 0.8em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 8px;
+				transition: background 0.3s ease;
+			}
+
+			.features-section li:hover {
+				background: rgba(255,255,255,0.08);
+			}
+
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(90deg, transparent, #9bf1ff, transparent);
+				margin: 3em 0;
+				border-radius: 1px;
+			}
+
+			@media (max-width: 768px) {
+				.video-grid {
+					grid-template-columns: 1fr;
+					gap: 1.5em;
+				}
+
+				.video-container {
+					padding: 1em;
+				}
+
+				.video-container iframe {
+					height: 220px;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tshiamo Rakgowa Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="simulations.html" class="active">Robot Simulations</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<div class="project-hero">
+								<h1 class="major">Robot Simulations</h1>
+								<img src="images/simulation.png" alt="Robot Simulations" />
+								<p style="font-size: 1.1em; line-height: 1.6; color: #ccc;">
+									Advanced robotic simulations demonstrating cutting-edge teleoperation and control techniques. Features Franka Emika robot arm performing complex manipulation tasks with Vision Pro integration.
+								</p>
+							</div>
+
+							<div class="features-section">
+								<h2>Project Overview</h2>
+								<p>This project showcases advanced simulation environments for robotic manipulation and teleoperation. Using state-of-the-art tools and frameworks, we demonstrate real-time control of robotic systems through immersive interfaces including Apple Vision Pro for spatial computing and telepresence applications.</p>
+
+								<h3>Key Features:</h3>
+								<ul>
+									<li>Franka Emika robot arm teleoperation</li>
+									<li>Apple Vision Pro integration for data collection</li>
+								</ul>
+							</div>
+
+							<div class="video-grid">
+								<div class="video-container">
+									<iframe src="https://www.youtube.com/embed/dYs3kWnwaTU?autoplay=1&mute=1&loop=1&playlist=dYs3kWnwaTU" title="Franka Robot Arm Teleoperation with Vision Pro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="video-caption">
+										<strong>Demonstration Video:</strong> Franka robot arm performing teleoperation with Apple Vision Pro
+									</div>
+								</div>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="features-section">
+								<h2>Technology Stack</h2>
+								<p>The simulation platform leverages industry-standard robotics frameworks and cutting-edge spatial computing technology:</p>
+								<ul>
+									<li><strong>Robot Platform:</strong> Franka Emika Panda robot arm</li>
+									<li><strong>Teleoperation Interface:</strong> Apple Vision Pro for spatial computing</li>
+									<li><strong>Simulation Environment:</strong> High-fidelity physics-based simulation</li>
+									<li><strong>Control Framework:</strong> Isaac lab for task definition and data collection</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Tshiamo Rakgowa. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
