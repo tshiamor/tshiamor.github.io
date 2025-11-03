@@ -153,13 +153,13 @@
 
 							<div class="video-grid">
 								<div class="video-container">
-									<iframe src="https://www.youtube.com/embed/dYs3kWnwaTU?autoplay=1&mute=1&loop=1&playlist=dYs3kWnwaTU" title="Franka Robot Arm Teleoperation with Vision Pro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe src="https://www.youtube.com/embed/dYs3kWnwaTU" title="Franka Robot Arm Teleoperation with Vision Pro" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 									<div class="video-caption">
 										<strong>Demonstration Video:</strong> Franka robot arm performing teleoperation with Apple Vision Pro
 									</div>
 								</div>
 								<div class="video-container">
-									<iframe src="https://www.youtube.com/embed/wg5dmLdY-JI?autoplay=1&mute=1&loop=1&playlist=wg5dmLdY-JI" title="Data Collection Stage with Environment Resets" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe src="https://www.youtube.com/embed/wg5dmLdY-JI" title="Data Collection Stage with Environment Resets" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 									<div class="video-caption">
 										<strong>Data Collection Replay:</strong> Replay of the data collection stage showing environment resets between each episode
 									</div>
@@ -171,11 +171,82 @@
 							<div class="features-section">
 								<h2>Technology Stack</h2>
 								<p>The simulation platform leverages industry-standard robotics frameworks and cutting-edge spatial computing technology:</p>
+
+								<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5em; margin: 2em 0;">
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">Robot Platform</h4>
+										<p style="margin: 0;">Franka Emika Panda robot arm</p>
+									</div>
+
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">Teleoperation Interface</h4>
+										<p style="margin: 0;">Apple Vision Pro for spatial computing</p>
+									</div>
+
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">Simulation Environment</h4>
+										<p style="margin: 0;">Isaac Sim 5.0</p>
+									</div>
+
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">Control Framework</h4>
+										<p style="margin: 0;">Isaac Lab for task definition and data collection</p>
+									</div>
+
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">Cosmos Transfer1</h4>
+										<p style="margin: 0;">Physical world foundation model for sim-to-real transfer</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="features-section">
+								<h2>Domain Randomization Pipeline</h2>
+								<p>This pipeline demonstrates an advanced data augmentation strategy using domain randomization to scale a limited set of demonstrations into a robust training dataset.</p>
+
+								<div style="text-align: center; margin: 2em 0;">
+									<img src="images/domain randomization pipeline.png" alt="Domain Randomization Pipeline" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);" />
+									<p style="font-style: italic; color: #ccc; margin-top: 1em;">Complete domain randomization pipeline from teleoperation to augmented dataset</p>
+								</div>
+
+								<h3>Pipeline Overview:</h3>
+
+								<h4>1. Collection (48 demos)</h4>
+								<p>Teleoperation was performed with the Franka arm in Isaac Lab using CloudXR with Vision Pro, recording synchronized observations across multiple modalities.</p>
+
+								<h4>2. Domain Randomization (Augmentation)</h4>
+								<p>For each original demonstration, 10 deterministic variations are created by randomizing:</p>
 								<ul>
-									<li><strong>Robot Platform:</strong> Franka Emika Panda robot arm</li>
-									<li><strong>Teleoperation Interface:</strong> Apple Vision Pro for spatial computing</li>
-									<li><strong>Simulation Environment:</strong> High-fidelity physics-based simulation</li>
-									<li><strong>Control Framework:</strong> Isaac lab for task definition and data collection</li>
+									<li><strong>Lighting:</strong> Intensity and color temperature variations</li>
+									<li><strong>Materials:</strong> Metallic and roughness properties</li>
+								</ul>
+								<p>This scales the dataset from 48 to 480 demonstrations (10x augmentation factor).</p>
+
+								<h4>3. Modalities</h4>
+								<p>Each demonstration stores time-aligned data including:</p>
+								<ul>
+									<li><strong>RGB Images:</strong> Wrist and table cameras (84×84 resolution)</li>
+									<li><strong>Depth Images:</strong> Wrist and table cameras (84×84 resolution)</li>
+									<li><strong>Segmentation:</strong> Semantic and instance segmentation masks</li>
+									<li><strong>Low-Dimensional State:</strong> End-effector position, quaternion orientation, and gripper state</li>
+								</ul>
+
+								<h4>4. Storage Format</h4>
+								<p>All outputs are written in a robomimic-style HDF5 format:</p>
+								<ul>
+									<li>Data organized in <code>data/demo_*</code> groups</li>
+									<li>Observations stored in <code>obs/</code> subdirectories</li>
+									<li>Attributes noting the original demo ID and variation index</li>
+								</ul>
+
+								<h4>5. Training Paths</h4>
+								<p>The resulting <code>augmented_dataset.hdf5</code> can feed multiple training approaches:</p>
+								<ul>
+									<li><strong>RGB Visuomotor Pipeline:</strong> Standard vision-based control policies</li>
+									<li><strong>Multi-Modal RGB+Depth:</strong> Policies leveraging both color and depth information</li>
+									<li><strong>Segmentation-Augmented:</strong> Using segmentation for auxiliary losses or teacher signals</li>
 								</ul>
 							</div>
 						</div>
