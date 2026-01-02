@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SO-101 Kitchen Simulation - Tshiamo Rakgowa Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Enhanced styling for the SO-101 Simulation page */
+			.project-hero {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+
+			.project-hero img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 8px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				margin-bottom: 1.5em;
+			}
+
+			.video-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+				gap: 2em;
+				margin: 2.5em 0;
+			}
+
+			.video-container {
+				background: rgba(255,255,255,0.05);
+				border-radius: 12px;
+				padding: 1.5em;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.video-container:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+			}
+
+			.video-container iframe {
+				width: 100%;
+				height: 280px;
+				border-radius: 8px;
+				margin-bottom: 1em;
+			}
+
+			.video-caption {
+				text-align: center;
+				font-style: italic;
+				color: #ccc;
+				margin-top: 1em;
+				padding: 0.5em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 6px;
+			}
+
+			.features-section {
+				background: rgba(255,255,255,0.03);
+				border-radius: 12px;
+				padding: 2em;
+				margin: 2.5em 0;
+				border-left: 4px solid #9bf1ff;
+			}
+
+			.features-section ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			.features-section li {
+				margin-bottom: 1em;
+				padding: 0.8em;
+				background: rgba(255,255,255,0.05);
+				border-radius: 8px;
+				transition: background 0.3s ease;
+			}
+
+			.features-section li:hover {
+				background: rgba(255,255,255,0.08);
+			}
+
+			.section-divider {
+				height: 2px;
+				background: linear-gradient(90deg, transparent, #9bf1ff, transparent);
+				margin: 3em 0;
+				border-radius: 1px;
+			}
+
+			@media (max-width: 768px) {
+				.video-grid {
+					grid-template-columns: 1fr;
+					gap: 1.5em;
+				}
+
+				.video-container {
+					padding: 1em;
+				}
+
+				.video-container iframe {
+					height: 220px;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Tshiamo Rakgowa Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="so101simulation.html" class="active">SO-101 Kitchen Simulation</a></li>
+						<li><a href="simulations.html">Robot Simulations</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<div class="project-hero">
+								<h1 class="major">SO-101 Kitchen Simulation</h1>
+								<img src="images/so101sim.png" alt="SO-101 Kitchen Simulation" />
+								<p style="font-size: 1.1em; line-height: 1.6; color: #ccc;">
+									Advanced simulation environment featuring the SO-101 robotic arm in a realistic kitchen setting. Leveraging USD assets, Isaac Lab, and GR00T Mimic for data augmentation and robust policy training.
+								</p>
+							</div>
+
+							<div class="features-section">
+								<h2>Project Overview</h2>
+								<p>This project demonstrates a sophisticated simulation pipeline for the SO-101 robotic arm operating in a kitchen environment. The simulation utilizes high-fidelity USD assets and state-of-the-art robotics frameworks to create realistic training scenarios for manipulation tasks.</p>
+
+								<h3>Key Features:</h3>
+								<ul>
+									<li><strong>SO-101 Robot Arm:</strong> Low-cost, high-performance robotic manipulator for kitchen tasks</li>
+									<li><strong>USD Assets:</strong> Universal Scene Description format for high-fidelity 3D assets and physics simulation</li>
+									<li><strong>Kitchen Environment:</strong> Realistic kitchen simulation with interactive objects and realistic physics</li>
+									<li><strong>GR00T Mimic Data Augmentation:</strong> Leveraging NVIDIA's foundation model for synthetic data generation</li>
+								</ul>
+							</div>
+
+							<div class="video-grid">
+								<div class="video-container">
+									<iframe src="https://www.youtube.com/embed/vl2QY0Iy1Mo" title="SO-101 Kitchen Simulation Demo 1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<div class="video-caption">
+										<strong>Demo Video 1:</strong> SO-101 arm performing manipulation tasks in kitchen simulation
+									</div>
+								</div>
+								<div class="video-container">
+									<iframe src="https://www.youtube.com/embed/rGtV_0SgFbA" title="SO-101 Kitchen Simulation Demo 2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<div class="video-caption">
+										<strong>Demo Video 2:</strong> Additional kitchen manipulation scenarios with the SO-101 arm
+									</div>
+								</div>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="features-section">
+								<h2>Technology Stack</h2>
+								<p>The simulation platform leverages cutting-edge robotics frameworks and tools for realistic physics simulation and policy learning:</p>
+
+								<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5em; margin: 2em 0;">
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">Robot Platform</h4>
+										<p style="margin: 0;">SO-101 robotic arm</p>
+									</div>
+
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">Asset Format</h4>
+										<p style="margin: 0;">USD (Universal Scene Description)</p>
+									</div>
+
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">Simulation Framework</h4>
+										<p style="margin: 0;">Isaac Lab</p>
+									</div>
+
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">World Generation</h4>
+										<p style="margin: 0;">Lightwheel</p>
+									</div>
+
+									<div style="background: rgba(155, 241, 255, 0.1); border: 2px solid #9bf1ff; border-radius: 12px; padding: 1.5em; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+										<h4 style="color: #9bf1ff; margin-bottom: 0.5em;">Data Augmentation</h4>
+										<p style="margin: 0;">GR00T Mimic</p>
+									</div>
+								</div>
+							</div>
+
+							<!--
+							<div class="section-divider"></div>
+
+							<div class="features-section">
+								<h2>USD Assets & Simulation Pipeline</h2>
+								<p>Universal Scene Description (USD) provides a robust foundation for creating and managing complex 3D scenes with physically accurate properties.</p>
+
+								<h3>USD Advantages:</h3>
+								<ul>
+									<li><strong>Interoperability:</strong> Seamless asset exchange between different DCC tools and simulation platforms</li>
+									<li><strong>Physics Properties:</strong> Embedded material properties, collision meshes, and rigid body dynamics</li>
+									<li><strong>Scalability:</strong> Efficient handling of complex scenes with hierarchical composition</li>
+									<li><strong>Variant Sets:</strong> Multiple asset variations for domain randomization</li>
+								</ul>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="features-section">
+								<h2>Isaac Lab Integration</h2>
+								<p>Isaac Lab provides a modular framework for robot learning built on top of Isaac Sim, enabling efficient policy training and deployment.</p>
+
+								<h3>Key Capabilities:</h3>
+								<ul>
+									<li><strong>Task Definition:</strong> Flexible environment and task configuration for kitchen manipulation scenarios</li>
+									<li><strong>Observation Spaces:</strong> Multi-modal observations including RGB, depth, and proprioceptive data</li>
+									<li><strong>Parallel Simulation:</strong> GPU-accelerated parallel environments for efficient data collection</li>
+									<li><strong>Policy Training:</strong> Integration with popular RL libraries for end-to-end learning</li>
+								</ul>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="features-section">
+								<h2>Lightwheel World Generation</h2>
+								<p>Lightwheel enables procedural generation of realistic kitchen environments with varied layouts, objects, and lighting conditions.</p>
+
+								<h3>Features:</h3>
+								<ul>
+									<li><strong>Procedural Layouts:</strong> Automatic generation of diverse kitchen configurations</li>
+									<li><strong>Object Placement:</strong> Intelligent placement of kitchen items and utensils</li>
+									<li><strong>Material Variation:</strong> Randomized textures and materials for visual diversity</li>
+									<li><strong>Lighting Scenarios:</strong> Dynamic lighting conditions for robust policy training</li>
+								</ul>
+							</div>
+
+							<div class="section-divider"></div>
+
+							<div class="features-section">
+								<h2>GR00T Mimic Data Augmentation</h2>
+								<p>GR00T Mimic leverages NVIDIA's foundation model capabilities to augment demonstration data, creating diverse training scenarios from limited human demonstrations.</p>
+
+								<h3>Augmentation Pipeline:</h3>
+								<ul>
+									<li><strong>Trajectory Synthesis:</strong> Generate novel trajectories based on demonstrated behaviors</li>
+									<li><strong>Context Variation:</strong> Adapt demonstrations to different object positions and orientations</li>
+									<li><strong>Failure Recovery:</strong> Synthesize recovery behaviors from near-failure states</li>
+									<li><strong>Multi-Task Transfer:</strong> Generalize single-task demonstrations to related manipulation tasks</li>
+								</ul>
+
+								<h3>Benefits:</h3>
+								<ul>
+									<li><strong>Data Efficiency:</strong> Multiply limited demonstrations into large-scale training datasets</li>
+									<li><strong>Generalization:</strong> Improve policy robustness across varied initial conditions</li>
+									<li><strong>Sim-to-Real Transfer:</strong> Enhanced domain randomization for better real-world performance</li>
+								</ul>
+							</div>
+							-->
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Tshiamo Rakgowa. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
