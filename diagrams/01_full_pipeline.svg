@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1800" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="ikGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="seedGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="optGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="fineGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="dilateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="interpGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="resultGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="1800" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <rect x="30" y="20" width="840" height="56" rx="10" fill="url(#headerGrad)" filter="url(#shadow)"/>
+  <text x="450" y="55" text-anchor="middle" fill="white" font-size="22" font-weight="700">cuRobo Motion Planning Pipeline</text>
+
+  <!-- ===== INPUT BOXES ===== -->
+  <!-- Current Joint State -->
+  <rect x="60" y="110" width="320" height="70" rx="10" fill="white" stroke="#94a3b8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="220" y="140" text-anchor="middle" fill="#334155" font-size="14" font-weight="600">Current Joint State</text>
+  <text x="220" y="163" text-anchor="middle" fill="#64748b" font-size="13" font-family="'Courier New', monospace">[&#952;&#8321;, &#952;&#8322;, &#952;&#8323;, &#952;&#8324;, &#952;&#8325;, &#952;&#8326;]</text>
+
+  <!-- Target EE Pose -->
+  <rect x="520" y="110" width="320" height="70" rx="10" fill="white" stroke="#94a3b8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="680" y="140" text-anchor="middle" fill="#334155" font-size="14" font-weight="600">Target EE Pose</text>
+  <text x="680" y="163" text-anchor="middle" fill="#64748b" font-size="13" font-family="'Courier New', monospace">[x, y, z, qw, qx, qy, qz]</text>
+
+  <!-- Arrows from inputs -->
+  <line x1="220" y1="180" x2="220" y2="390" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <line x1="680" y1="180" x2="680" y2="210" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 1: IK ===== -->
+  <rect x="490" y="218" width="380" height="130" rx="12" fill="url(#ikGrad)" filter="url(#shadow)"/>
+  <text x="500" y="242" fill="white" font-size="11" font-weight="700" opacity="0.7">STEP 1</text>
+  <text x="680" y="264" text-anchor="middle" fill="white" font-size="17" font-weight="700">Inverse Kinematics</text>
+  <text x="680" y="290" text-anchor="middle" fill="#e9d5ff" font-size="12">Find joint angles that place EE at the target pose.</text>
+  <text x="680" y="310" text-anchor="middle" fill="#e9d5ff" font-size="12">Multiple solutions possible (elbow up/down,</text>
+  <text x="680" y="328" text-anchor="middle" fill="#e9d5ff" font-size="12">wrist flip). Selects best candidate.</text>
+
+  <!-- Arrow from IK down -->
+  <line x1="680" y1="348" x2="680" y2="378" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Goal Joint State label -->
+  <rect x="555" y="382" width="250" height="36" rx="8" fill="white" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="680" y="405" text-anchor="middle" fill="#6d28d9" font-size="13" font-weight="600">Goal: [&#952;&#8321;*, &#952;&#8322;*, &#952;&#8323;*, &#952;&#8324;*, &#952;&#8325;*, &#952;&#8326;*]</text>
+
+  <!-- Arrows converging to Seed -->
+  <line x1="220" y1="390" x2="220" y2="440" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="680" y1="418" x2="680" y2="440" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 2: LINEAR SEED ===== -->
+  <rect x="80" y="448" width="740" height="130" rx="12" fill="url(#seedGrad)" filter="url(#shadow)"/>
+  <text x="90" y="472" fill="white" font-size="11" font-weight="700" opacity="0.7">STEP 2</text>
+  <text x="450" y="494" text-anchor="middle" fill="white" font-size="17" font-weight="700">Linear Interpolation Seed</text>
+  <text x="450" y="518" text-anchor="middle" fill="#bfdbfe" font-size="12">Straight-line interpolation in joint space: start &#8594; goal across 48 timesteps.</text>
+
+  <!-- Seed visualization: dots -->
+  <text x="140" y="548" fill="#bfdbfe" font-size="11" font-family="'Courier New', monospace">t=0</text>
+  <circle cx="180" cy="554" r="6" fill="white"/>
+  <text x="196" y="548" fill="white" font-size="10">&#8594;</text>
+  <text x="215" y="548" fill="white" font-size="10">&#8594;</text>
+  <text x="234" y="548" fill="white" font-size="10">&#8594;</text>
+  <text x="255" y="548" fill="#bfdbfe" font-size="10">...</text>
+  <text x="285" y="548" fill="white" font-size="10">&#8594;</text>
+  <text x="304" y="548" fill="white" font-size="10">&#8594;</text>
+  <text x="323" y="548" fill="white" font-size="10">&#8594;</text>
+  <circle cx="350" cy="554" r="6" fill="white"/>
+  <text x="364" y="548" fill="#bfdbfe" font-size="11" font-family="'Courier New', monospace">t=47</text>
+
+  <text x="450" y="568" text-anchor="middle" fill="#93c5fd" font-size="11" font-style="italic">Naive seed &#8212; may collide or violate limits. Just a starting point for optimization.</text>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="578" x2="450" y2="608" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 3: TRAJOPT ===== -->
+  <rect x="80" y="616" width="740" height="210" rx="12" fill="url(#optGrad)" filter="url(#shadow)"/>
+  <text x="90" y="640" fill="white" font-size="11" font-weight="700" opacity="0.7">STEP 3</text>
+  <text x="450" y="662" text-anchor="middle" fill="white" font-size="17" font-weight="700">GPU Trajectory Optimization (TrajOpt)</text>
+  <text x="450" y="688" text-anchor="middle" fill="#fef3c7" font-size="12">Parallel L-BFGS optimization over all 48 timesteps simultaneously on GPU.</text>
+
+  <!-- Cost function -->
+  <rect x="120" y="702" width="660" height="32" rx="6" fill="#00000020"/>
+  <text x="450" y="723" text-anchor="middle" fill="white" font-size="13" font-weight="600" font-family="'Courier New', monospace">Cost = w&#8321;&#183;collision + w&#8322;&#183;smoothness + w&#8323;&#183;limits + w&#8324;&#183;vel + w&#8325;&#183;acc + w&#8326;&#183;jerk</text>
+
+  <!-- Constraints list -->
+  <text x="140" y="758" fill="white" font-size="12">&#9679; No collision sphere penetrates any world obstacle</text>
+  <text x="140" y="776" fill="white" font-size="12">&#9679; No self-collision between robot links</text>
+  <text x="140" y="794" fill="white" font-size="12">&#9679; Joint accelerations &#8804; 6.0 rad/s&#178;   &#183;   Joint jerk &#8804; 200.0 rad/s&#179;</text>
+  <text x="140" y="812" fill="#fef3c7" font-size="11" font-style="italic">Up to 10 attempts with different seeds if first fails.</text>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="826" x2="450" y2="856" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 4: FINETUNE ===== -->
+  <rect x="150" y="864" width="600" height="90" rx="12" fill="url(#fineGrad)" filter="url(#shadow)"/>
+  <text x="160" y="888" fill="white" font-size="11" font-weight="700" opacity="0.7">STEP 4</text>
+  <text x="450" y="910" text-anchor="middle" fill="white" font-size="17" font-weight="700">Parallel Finetune TrajOpt</text>
+  <text x="450" y="934" text-anchor="middle" fill="#fecaca" font-size="12">Second pass: tightens smoothness and reduces residual constraint violations.</text>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="954" x2="450" y2="984" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 5: TIME DILATION ===== -->
+  <rect x="100" y="992" width="700" height="140" rx="12" fill="url(#dilateGrad)" filter="url(#shadow)"/>
+  <text x="110" y="1016" fill="white" font-size="11" font-weight="700" opacity="0.7">STEP 5</text>
+  <text x="450" y="1038" text-anchor="middle" fill="white" font-size="17" font-weight="700">Time Dilation (factor = 0.5)</text>
+  <text x="450" y="1064" text-anchor="middle" fill="#d1fae5" font-size="12">Stretches the trajectory to 2&#215; duration. Halves all velocities and accelerations.</text>
+
+  <!-- Before/After comparison -->
+  <rect x="150" y="1078" width="260" height="40" rx="6" fill="#00000020"/>
+  <text x="280" y="1103" text-anchor="middle" fill="white" font-size="12" font-weight="600">Before: 48 steps at dt &#8594; time T</text>
+  <rect x="490" y="1078" width="260" height="40" rx="6" fill="#00000020"/>
+  <text x="620" y="1103" text-anchor="middle" fill="white" font-size="12" font-weight="600">After: 48 steps at 2dt &#8594; time 2T</text>
+
+  <!-- Arrow between -->
+  <line x1="414" y1="1098" x2="486" y2="1098" stroke="white" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="1132" x2="450" y2="1162" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 6: INTERPOLATION ===== -->
+  <rect x="100" y="1170" width="700" height="170" rx="12" fill="url(#interpGrad)" filter="url(#shadow)"/>
+  <text x="110" y="1194" fill="white" font-size="11" font-weight="700" opacity="0.7">STEP 6</text>
+  <text x="450" y="1216" text-anchor="middle" fill="white" font-size="17" font-weight="700">Cubic Spline Interpolation (dt = 0.005s &#8594; 200 Hz)</text>
+  <text x="450" y="1242" text-anchor="middle" fill="#cffafe" font-size="12">Upsample 48 optimized waypoints to ~500-2000 dense waypoints.</text>
+
+  <!-- Coarse to dense visualization -->
+  <rect x="150" y="1256" width="170" height="36" rx="6" fill="#00000020"/>
+  <text x="235" y="1279" text-anchor="middle" fill="white" font-size="12" font-weight="600">48 waypoints</text>
+  <text x="345" y="1279" fill="white" font-size="16" font-weight="700">&#9654;</text>
+  <rect x="370" y="1256" width="280" height="36" rx="6" fill="#00000020"/>
+  <text x="510" y="1279" text-anchor="middle" fill="white" font-size="12" font-weight="600">~500-2000 dense waypoints</text>
+
+  <!-- Output fields -->
+  <text x="170" y="1316" fill="white" font-size="12">&#9679; position: [&#952;&#8321;, &#952;&#8322;, &#952;&#8323;, &#952;&#8324;, &#952;&#8325;, &#952;&#8326;]</text>
+  <text x="420" y="1316" fill="white" font-size="12">&#9679; velocity: [&#952;&#775;&#8321;, &#952;&#775;&#8322;, &#952;&#775;&#8323;, &#952;&#775;&#8324;, &#952;&#775;&#8325;, &#952;&#775;&#8326;]</text>
+  <text x="670" y="1316" fill="white" font-size="12">&#9679; acceleration</text>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="1340" x2="450" y2="1380" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== RESULT ===== -->
+  <rect x="200" y="1388" width="500" height="100" rx="12" fill="url(#resultGrad)" filter="url(#shadow)"/>
+  <text x="450" y="1418" text-anchor="middle" fill="white" font-size="18" font-weight="700">MotionGenResult</text>
+  <text x="450" y="1446" text-anchor="middle" fill="#dcfce7" font-size="13" font-family="'Courier New', monospace">success: True</text>
+  <text x="450" y="1468" text-anchor="middle" fill="#dcfce7" font-size="13" font-family="'Courier New', monospace">interpolated_plan: position (T,6) + velocity (T,6)</text>
+
+  <!-- Step numbers on left side -->
+  <circle cx="42" cy="283" r="16" fill="#8b5cf6"/>
+  <text x="42" y="288" text-anchor="middle" fill="white" font-size="12" font-weight="700">1</text>
+  <circle cx="42" cy="513" r="16" fill="#3b82f6"/>
+  <text x="42" y="518" text-anchor="middle" fill="white" font-size="12" font-weight="700">2</text>
+  <circle cx="42" cy="721" r="16" fill="#f59e0b"/>
+  <text x="42" y="726" text-anchor="middle" fill="white" font-size="12" font-weight="700">3</text>
+  <circle cx="42" cy="909" r="16" fill="#ef4444"/>
+  <text x="42" y="914" text-anchor="middle" fill="white" font-size="12" font-weight="700">4</text>
+  <circle cx="42" cy="1062" r="16" fill="#10b981"/>
+  <text x="42" y="1067" text-anchor="middle" fill="white" font-size="12" font-weight="700">5</text>
+  <circle cx="42" cy="1255" r="16" fill="#06b6d4"/>
+  <text x="42" y="1260" text-anchor="middle" fill="white" font-size="12" font-weight="700">6</text>
+
+  <!-- Vertical connecting line on left -->
+  <line x1="42" y1="299" x2="42" y2="497" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="42" y1="529" x2="42" y2="705" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="42" y1="737" x2="42" y2="893" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="42" y1="925" x2="42" y2="1046" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="42" y1="1078" x2="42" y2="1239" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>
